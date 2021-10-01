@@ -13,6 +13,9 @@
 {
   color:deeppink ;
 }
+.navbar i:hover{
+  color:deeppink;
+}
 .navbar ul{
   list-style: none;
   padding-top:15px;

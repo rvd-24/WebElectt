@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="addvoter.css">
     <script src="randomkey_id_generator.js"></script>
     <script src="Display_Input_values.js"></script>
+    <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script></head>
 </head>
 <body>
     <div class="box">
@@ -47,13 +48,21 @@
         <div id="pmail"></div>
     </div>
     <script>
-
-    </script>
-    <script>
         document.querySelector("#add-voter").addEventListener("click",function()
         {document.querySelector(".popup").classList.add("active");});
         document.querySelector("#cl").addEventListener("click",function()
         {document.querySelector(".popup").classList.remove("active");});
     </script>
+    <div class="navbar">
+        <ul>
+            <li><i class="material-icons">description</i><a id="top" href="#">Overview</a></li>
+            <li><i  class="material-icons">settings</i><a id="top" href="#"> Settings</a></li>
+            <li><i class="material-icons">ballot</i><a id="top" href="#"> Ballot</a></li>
+            <li><i class="material-icons">how_to_reg</i><a id="top" href="#">Voters</a></li>
+            <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
+            <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
+            <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
+        </ul>
+    </div>
 </body>
 </html>

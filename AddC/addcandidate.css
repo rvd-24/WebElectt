@@ -1,12 +1,12 @@
 .navbar
 {
   width:100%;
-  position:absolute;
+  position:fixed;
+  top:0;
   display: flex;
   height:12%;
   background-color: #333;
   overflow:visible;
-  margin-top: -360px;
   text-align: center;
 }
 .navbar a:hover

@@ -1,0 +1,160 @@
+body{
+    background-color:white;
+    color: #555;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6em;
+    margin: 0;
+    width: 100%;
+}
+
+#top:hover
+{
+    color: deeppink;   
+}
+.navbar
+{
+    background-color: #333;
+    overflow:visible;
+    margin: 0;
+    
+}
+a:hover
+{
+    color:deeppink ;
+}
+.navbar i:hover{
+    color:deeppink;
+  }
+
+.navbar ul{
+    list-style: none;
+    padding: 20px 0px;
+    text-align: center;
+    margin: 0;
+}
+
+.navbar li{
+    display:inline;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.navbar a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0;
+    font-size: 20px;
+    
+}
+.navbar a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0;
+    font-size: 20px;
+      
+  }
+  .navbar .material-icons,#rocket
+  {
+    width: 25px;
+    height: 25px;
+    margin-right: 2px; 
+    color: azure; 
+  }
+
+
+.overview 
+{
+    background-color: #0bacfa;;
+    color:#fff;
+    padding: 5px 20px;
+    margin-top: 0px;
+    font-size: 20px;
+    margin: 0;
+    height: 20%;
+}
+
+.box1
+{
+    float: left;
+    width: 50%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.box2
+{
+    float: right;
+    color: #fff;
+    width: 50%;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+.clr
+{
+    clear: both;
+}
+
+
+.column 
+{
+    float: left;
+    width: 50%;
+    padding:10px;
+}
+  
+
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+  
+  
+  
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 90px;
+text-align: center;
+margin: 10px;
+background-color: #f1f1f1;
+overflow: visible;
+}
+
+.container
+{
+    margin-top: 60px;
+    position:relative;
+    padding: 10px;
+}
+h2
+{
+    font-family: Cooper Black;
+    font-size:x-large;
+}
+h3
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+footer
+{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.foot
+{
+    color:rgba(19, 206, 112, 0.918);
+}

@@ -9,6 +9,18 @@
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 </head>
 <body>
+ <header>
+        <div class="navbar">
+        <ul>
+            <li><i class="material-icons">description</i><a id="top" href="https://rvd-24.github.io/WebElectt/Overview/"> Overview</a></li>
+            <li><i  class="material-icons">settings</i><a id="top" href="#"> Settings</a></li>
+            <li><i class="material-icons">ballot</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddC/"> Ballot</a></li>
+            <li><i class="material-icons">how_to_reg</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddV/">Voters</a></li>
+            <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
+            <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
+            <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
+        </ul>
+  </div>
  <div class="row">
  <div class="column">
  <article>
@@ -114,10 +126,10 @@
  </div>
 
  <br>
- <footer align="center">
- &copy; 2021 Student Voting Form. All Rights Reserved | Design By Students
- </footer>
- 
+<footer align="center">
+            &copy; 2021 Student Voting Form. All Rights Reserved | Design By <span class="foot">Students</span> 
+        </footer>
+  
  <script>
         var app = angular.module('myApp', []);
         app.controller('validateCtrl', function($scope) {

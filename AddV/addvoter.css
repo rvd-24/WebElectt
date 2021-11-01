@@ -157,6 +157,12 @@ table{
   border: greenyellow;
 }
 #mytable{
+  top:50%;
+  left:35%;
+  position:fixed;
+  height:100%;
+  width:550px;
+  margin-top:120px;
   height: 100px;
   width: 600px;
   border: greenyellow;

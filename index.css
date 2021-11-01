@@ -5,7 +5,7 @@
 .container
 {
  padding-bottom:3px;
- margin:3px;
+ margin:50px;
  padding-top: none;
 
 }
@@ -127,55 +127,50 @@
 }
 .navbar
 {
-    background-color: #333;
-    overflow:visible;
-    margin: 0;
-    
+  left:-20px;
+  width:1000000000px;
+  position:fixed;
+  top:0px;
+  display: flex;
+  height:12%;
+  background-color: #333;
+  overflow:visible;
+  text-align: center;
 }
-a:hover
+.navbar a:hover
 {
-    color:deeppink ;
+  color:deeppink ;
 }
 .navbar i:hover{
-    color:deeppink;
-  }
-
+  color:deeppink;
+}
 .navbar ul{
-    list-style: none;
-    padding: 20px 0px;
-    text-align: center;
-    margin: 0;
+  list-style: none;
+  padding-top:15px;
+  text-align: center;
 }
 
 .navbar li{
-    display:inline;
-    padding: 0 20px;
-    margin: 0;
+  margin-left: 65px;
+  text-align: center;
+  display:inline;
 }
 
 .navbar a{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0;
-    font-size: 20px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+  font-size: 20px;
     
 }
-.navbar a{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0;
-    font-size: 20px;
-      
-  }
-  .navbar .material-icons,#rocket
-  {
-    width: 25px;
-    height: 25px;
-    margin-right: 2px; 
-    color: azure; 
-  }
+.navbar .material-icons,#rocket
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 2px; 
+  color: azure; 
+}
 footer
 {
     background-color: #333;

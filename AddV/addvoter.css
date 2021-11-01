@@ -31,7 +31,7 @@
 .navbar a{
   color: whitesmoke;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
   font-size: 20px;
     
@@ -44,9 +44,9 @@
   color: azure; 
 }
 .box{
-  position:fixed;
+  position:absolute;
   top:50%;
-  left:50%;
+  left:48%;
   margin-top: -50px;
   margin-left: -100px;
 }
@@ -137,6 +137,7 @@ width:45%;
 margin-right:12px;
 }
 #add-voter{
+  margin-left: 40px;
   background-color: #2ecd10;
 }
 #import,#add-voter{
@@ -145,25 +146,29 @@ margin-right:12px;
 }
 .showme{
   top:50%;
-  left:35%;
-  position:fixed;
-  height:100%;
-  width:550px;
-  margin-top:120px;
-}
-table{
-  height: 100px;
-  width: 600px;
-  border: greenyellow;
+  left: 50%;
+  position:static;
+  margin-top:420px;
+  width: 100%;
+  height: 100%;
 }
 #mytable{
   top:50%;
-  left:35%;
+  left:39%;
   position:fixed;
-  height:100%;
-  width:550px;
   margin-top:120px;
   height: 100px;
   width: 600px;
-  border: greenyellow;
+}
+table{
+  height: 100px;
+  width: 80%;
+  border:rgba(34, 34, 34, 0);
+  text-align: center;
+}
+tr:nth-child(2n){
+  background-color:whitesmoke;
+}
+body{
+  font-family: 'Quicksand', sans-serif;
 }

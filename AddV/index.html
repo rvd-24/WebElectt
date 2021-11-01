@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="addvoter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <script src="randomkey_id_generator.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script>
@@ -48,7 +51,6 @@
     <div class="box">
         <h1> Add Voters</h1>
         <p class="lead">Add voters to this election.</p>
-        <button type="button" class="btn btn-outline-primary btn-lg" id="import"><i class="material-icons">file_upload</i>Import</button>
         <button type="button" class="btn btn-success btn-lg" id="add-voter"><i class="material-icons">add</i>Add Voter</button>
     </div>
     <div class="popup">
@@ -79,8 +81,8 @@
         </div>
     </div>
     <div id="disp" class="showme">
-        <table id="showdetails" align="center" border="2px solid" style="display: none;height: 100px;width: 600px;">
-            <tr style="border: 1px solid;column-span: 2px;">
+        <table id="showdetails" align="center" border="2px solid" style="display: none;">
+            <tr  rowspan="6" style="border: 1px solid;column-span: 2px;">
                 <td colspan="2">Voter Name</td>
                 <td colspan="2">Voter ID</td>
                 <td colspan="2">Email</td>

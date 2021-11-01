@@ -5,13 +5,49 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="addvoter.css">
     <script src="randomkey_id_generator.js"></script>
-    <script src="Display_Input_values.js"></script>
-    <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script></head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+        $("#addvote").click(function(){
+        document.getElementById("showdetails").style.display="";
+        voters=
+        [
+            {
+                "Name":$("#namevoter").val(),
+                "VoterID":$("#voterid").val(),
+                "Email":$("#email").val()
+            }
+        ];
+        for(var i=0; i<voters.length;i++)
+            {
+                var tr="<tr>";
+                var td1 ="<td colspan=2>"+voters[i]["Name"]+"</td>";
+                var td2 ="<td colspan=2>"+voters[i]["VoterID"]+"</td>";
+                var td3 ="<td colspan=2>"+voters[i]["Email"]+"</td>"+"</tr>";
+                $("#showdetails").append(tr+td1+td2+td3);
+            }
+        });
+
+});
+    </script>
+</head>
 </head>
 <body>
+    <div class="navbar">
+        <ul>
+            <li><i class="material-icons">description</i><a id="top" href="https://rvd-24.github.io/WebElectt/Overview/">Overview</a></li>
+            <li><i  class="material-icons">settings</i><a id="top" href="#"> Settings</a></li>
+            <li><i class="material-icons">ballot</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddC/"> Ballot</a></li>
+            <li><i class="material-icons">how_to_reg</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddV/">Voters</a></li>
+            <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
+            <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
+            <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
+        </ul>
+    </div>
     <div class="box">
         <h1> Add Voters</h1>
-        <p class="lead">Add voters to thissssssssss election.</p>
+        <p class="lead">Add voters to this election.</p>
         <button type="button" class="btn btn-outline-primary btn-lg" id="import"><i class="material-icons">file_upload</i>Import</button>
         <button type="button" class="btn btn-success btn-lg" id="add-voter"><i class="material-icons">add</i>Add Voter</button>
     </div>
@@ -37,15 +73,19 @@
             <input type="email" id="email" placeholder="Voter's E-mail" required>
         </div>
         <div class="form-element">
-            <button type="button" class="btn btn-success btn-lg" id="addvote" onclick="showvalues()"><i class="icon-plus"></i>Add Voter</button>
+            <button type="button" class="btn btn-success btn-lg" id="addvote"><i class="icon-plus"></i>Add Voter</button>
             <button type="button" class="btn btn-light" id="cl" >Close</button>
         </div>
         </div>
     </div>
     <div id="disp" class="showme">
-        <div id="pname"></div>
-        <div id="pid"></div>
-        <div id="pmail"></div>
+        <table id="showdetails" align="center" border="2px solid" style="display: none;height: 100px;width: 600px;">
+            <tr style="border: 1px solid;column-span: 2px;">
+                <td colspan="2">Voter Name</td>
+                <td colspan="2">Voter ID</td>
+                <td colspan="2">Email</td>
+            </tr>
+        </table>
     </div>
     <script>
         document.querySelector("#add-voter").addEventListener("click",function()
@@ -53,16 +93,5 @@
         document.querySelector("#cl").addEventListener("click",function()
         {document.querySelector(".popup").classList.remove("active");});
     </script>
-    <div class="navbar">
-        <ul>
-            <li><i class="material-icons">description</i><a id="top" href="https://rvd-24.github.io/WebElectt/Overview/">Overview</a></li>
-            <li><i  class="material-icons">settings</i><a id="top" href="#"> Settings</a></li>
-            <li><i class="material-icons">ballot</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddC/"> Ballot</a></li>
-            <li><i class="material-icons">how_to_reg</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddV/">Voters</a></li>
-            <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
-            <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
-            <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
-        </ul>
-    </div>
 </body>
 </html>

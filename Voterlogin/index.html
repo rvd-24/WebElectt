@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VOTERS | LOGIN</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="voterlogin.css">
+    <script src=<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $(("#submit").click(function() {
+        $("form[name='form']").validate({
+        
+        rules: {
+            name: "required",
+            votid: {
+            required: true,
+            minlength: 2
+            }
+        },
+        
+        messages: {
+            firstname: "Please enter your name",
+            votid: {
+            required: "Please provide a voter id",
+            minlength: "Your password must be at least 2 characters long"
+            },
+            
+        },
+        submitHandler: function(form) {
+            form.submit();
+        }
+        });
+    }));
+});
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><i class="material-icons">description</i><a id="top" href="https://rvd-24.github.io/WebElectt/Overview/">Overview</a></li>
+                <li><i  class="material-icons">settings</i><a id="top" href="#"> Settings</a></li>
+                <li><i class="material-icons">ballot</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddC/"> Ballot</a></li>
+                <li><i class="material-icons">how_to_reg</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddV/">Voters</a></li>
+                <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
+                <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
+                <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="left">
+            <div class="quote" >
+            "Your voices are being heard and you’re proving to our ancestors that their struggles were not in vain. 
+            Now we have one more thing we need to do to walk in our true power, and that is to vote"
+            
+            <p style="color:rgba(19, 206, 112, 0.918);"> -Beyoncé, Grammy Award-winning singer and artist </p>
+           </div>
+           <div class="image">
+           <img src="image/main3.jpg"  alt="" align="left">
+           <img src="image/main6.jpg" alt="" align="right">
+        </div>
+        </div>
+        <div class="right">
+            <form class="form" name="form" method="POST" class="form" action="blank" align="left">
+                <h1>LOGIN HERE</h1>
+                <hr>
+                <label for="First name"><b>VOTERS NAME</b></label>
+                <br>
+                <input type="text" class="name" placeholder="Enter full name" maxlength="20" name="name" id="Name" required>
+                <br>
+                <label for="regno"><b>VOTERS ID</b></label>
+                <br>
+                <input type="text" class="votid" maxlength="9" placeholder="Enter ID" name="votid" id="Id" required>
+                <br>
+                <input type="submit" name="submit" class="sub" id="submit" value="Submit" size="25">
+                
+                <input type="reset" name="submit" class="res" value="Reset" size="25">
+                </form>
+        </div>
+
+      </div>
+
+      <div class="clr"></div>
+      <footer align="center">
+        &copy; 2021 Student Voting Form. All Rights Reserved | Design By <span class="foot">Students</span> 
+    </footer>
+</body>
+</html>

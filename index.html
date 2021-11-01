@@ -6,69 +6,118 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Voting Login</title>
  <link rel="stylesheet" href="index.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 </head>
 <body>
+ <header>
+        <div class="navbar">
+        <ul>
+            <li><i class="material-icons">description</i><a id="top" href="https://rvd-24.github.io/WebElectt/Overview/"> Overview</a></li>
+            <li><i  class="material-icons">settings</i><a id="top" href="#"> Settings</a></li>
+            <li><i class="material-icons">ballot</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddC/"> Ballot</a></li>
+            <li><i class="material-icons">how_to_reg</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddV/">Voters</a></li>
+            <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
+            <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
+            <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
+        </ul>
+  </div>
  <div class="row">
  <div class="column">
  <article>
- <form method="POST" class="form" action="blank" align="left">
- <div class="container">
- <h1>REGISTER HERE</h1>
- <hr>
- </div>
- <label for="First name"><b>First name</b></label>
- <br>
- <input type="text" placeholder="Enter first name" maxlength="20" name="first_name" id="fname" required>
- <br>
- <label for="last name"><b>Last name</b></label>
- <br>
- <input type="text" placeholder="Enter last name" maxlength="20" name="last_name" id="lname" required>
- <br>
- <label for="email"><b>Email</b></label>
- <br>
- <input type="text" placeholder="Enter Email" name="email" id="email" required>
- <br>
- <label for="regno"><b>Registration Number</b></label>
- <br>
- <input type="text" maxlength="9" placeholder="Enter RegNo" nam
-e="regno" id="regno" required>
- <br>
- <b>Phone Number</b>
- <br>
- <input type="text" placeholder="Enter number" name="number" ma
-xlength="10" id="num" required>
- <br>
- <b>Gender</b>
- <br>
- <input type="radio" name="gender" value="Male">Male
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <input type="radio" name="gender" value="Female">Female
- <br>
- <br>
- <b>Password</b>
- <br>
- <input type="password" name="password" maxlength="8" size="20" required>
- <br>
- <b>Confirm password</b>
- <br>
- <input type="password" name="password" maxlength="8" size="20" required>
- <br>
+                <form method="POST" class="form" action="blank" align="left" ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+                    <div class="container">
+                        <h1>REGISTER HERE</h1>
+                        <hr>
+                    </div>
 
- <div>
- <input type="checkbox" name="checkbox"> I agree to the <a href="blank" target="new">Terms and Conditions</a>
- <br>
- <br>
- <input type="submit" name="submit" class="sub" value="Submit"size="25">
+                    <label for="First name"><b>First name</b></label> <br>
+                    <input type="text" name="user" ng-model="user" required placeholder="Enter first name"><br>
+                    <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                    <span ng-show="myForm.user.$error.required">First name is required.</span>
+                    </span>
+                    <br>
 
- <input type="reset" name="submit" class="res" value="Reset" size="25">
- </div>
- <br>
- <div class="signin">
- <p>Already have an account? <a href="#" target="blank">Log
-in</a>.</p>
- </div>
- </form>
- </article>
+                    
+                    <label for="last name"><b>Last name</b></label> 
+                    <br>
+                    <input type="text" name="last" ng-model="last" required placeholder="Enter last name"><br>
+                    <span style="color:red" ng-show="myForm.last.$dirty && myForm.last.$invalid">
+                    <span ng-show="myForm.last.$error.required">Lastname is required.</span>
+                    </span>
+                    <br>
+                    
+                    <label for="email"><b>Email</b></label>
+                    <br>
+                    <input type="email" name="email" ng-model="email" required placeholder="Enter your email"><br>
+                    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                    <span ng-show="myForm.email.$error.required">Email is required.</span>
+                    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                    </span>
+                    <br>
+                    
+                    <label for="regno"><b>Registration Number</b></label>
+                    <br>
+                    <input type="text" name="regno" ng-model="regno" ng-pattern="reg" required placeholder="Enter your regno"><br>
+                    <span style="color:red" ng-show="myForm.regno.$dirty && myForm.regno.$invalid">
+                    <span ng-show="myForm.regno.$error.required">Regno is required.</span>
+                    <span ng-show="myForm.regno.$error.pattern">Invalid regno.</span>
+                    </span>
+                    <br>
+
+                    <b>Phone Number</b>
+                    <br>
+                    <input type="text" name="phone" ng-model="phone" ng-pattern="pho" required placeholder="Enter your phone number"><br>
+                    <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+                    <span ng-show="myForm.phone.$error.required">Phone no is required.</span>
+                    <span ng-show="myForm.phone.$error.pattern">Invalid phone no.</span>
+                    </span>
+                    <br>
+
+                    <b>Gender</b> 
+                    <br>
+                    <input type="radio" name="gender" value="Male" checked>Male
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="Female">Female
+                    <br>
+                    <br>
+
+                    <b>Password</b> 
+                    <br>
+                    <input type="password" ng-model="pass" name="pass" ng-pattern="re" placeholder="Enter password." required><br>
+                    <span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+                    <span ng-show="myForm.pass.$error.required">Password is required.</span>
+                    <span ng-show="myForm.pass.$error.pattern">Not valid password.</span>
+                    </span>
+                    <br>
+
+
+                    <b>Confirm password</b> 
+                    <br>
+                    <input type="password" ng-model="repass" ng-keyup="compare(repass)" name="repass" ng-pattern="re" placeholder="Re-enter password." required><br>
+                    <span style="color:red" ng-show="myForm.repass.$dirty && myForm.repass.$invalid">
+                    <span ng-show="myForm.repass.$error.required">Re-password is required.</span>
+                    <span ng-show="isconfirm || myForm.repass.$dirty " ng-class="{true:'green',false:'red'}[isconfirm]">
+                        Password {{isconfirm==true?'':'not'}} match
+                    </span>
+                    </span>
+                    
+                    
+                    <div>
+                    <input type="checkbox" name="checkbox" checked> I agree to the <a href="blank" target="new">Terms and Conditions</a> 
+                    <br>
+                    <br>
+    
+                    <button name="submit" class="sub" size="25" ng-disabled = "myForm.user.$dirty && myForm.user.$invalid || myForm.last.$dirty && myForm.last.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.regno.$dirty && myForm.regno.$invalid || myForm.phone.$dirty && myForm.phone.$invalid || myForm.pass.$dirty && myForm.pass.$invalid || myForm.repass.$dirty && myForm.repass.$invalid" ng-click="submit()">Submit</button>
+                    <button class="res" size="25"  ng-click="reset()">Reset</button>
+                    </div>
+
+                    <br>
+
+                    <div class="signin">
+                        <p>Already have an account? <a href="login2.html" target="blank">Login</a>.</p>
+                    </div>
+            </form>
+            </article>
  </div>
  <div class="img" >
  <img src="login1.jpg" alt="Image not display" width="43%">
@@ -77,8 +126,30 @@ in</a>.</p>
  </div>
 
  <br>
- <footer align="center">
- &copy; 2021 Student Voting Form. All Rights Reserved | Design By Students
- </footer>
+<footer align="center">
+            &copy; 2021 Student Voting Form. All Rights Reserved | Design By <span class="foot">Students</span> 
+        </footer>
+  
+ <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function($scope) {
+        $scope.reg = /^[0-9]{5}$/;
+        $scope.pho = /^[0-9]{10}$/;
+        $scope.re = /^[a-zA-Z0-9]\w{3,14}$/;
+        $scope.compare = function (repass) {
+                  $scope.isconfirm = $scope.pass == repass ?
+                          true : false;
+              }
+        $scope.reset = function() {
+            $scope.user = "";
+            $scope.last = "";
+            $scope.regno = "";
+            $scope.phone = "";
+            $scope.pass = "";
+            $scope.repass = "";
+            }
+            //$scope.reset();  
+        });
+    </script>
 </body>
 </html>

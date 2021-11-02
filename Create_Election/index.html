@@ -17,7 +17,7 @@
             <form method="" class="elect" action="https://rvd-24.github.io/WebElectt/Overview/">
                     <div class="box">
                         <label for="Title">Title</label><br>
-                        <input type="text" minlength="2" maxlength="200" placeholder="e.g. School/College,Board of Directors,Political" required><br>
+                        <input type="text" minlength="2" id="title" maxlength="200" placeholder="e.g. School/College,Board of Directors,Political" required><br>
                             <div class="sd">
                            <label for="Start Date">Start Date</label><br>
                             <input type="datetime-local" id="sdate" required><br></div>
@@ -37,7 +37,15 @@
                 alert("Enter Name of Election and the Start and End Date for it.")
             }
             function redirect(){
-                window.location.href="https://rvd-24.github.io/WebElectt/Overview/"
+                var title=document.getElementById("title").val;
+                var sdate=document.getElementById("sdate").val;
+                var edate=document.getElementById("edate").val;
+                if(t==undefined||sdate==undefined||edate==undefined){
+                    alert("Fields are empty");
+                }
+                else{
+                    window.location.href="https://rvd-24.github.io/WebElectt/Overview/"
+                }
             }
         </script>
     </body>

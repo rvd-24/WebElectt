@@ -60,7 +60,7 @@
                     
                     <label for="regno"><b>Registration Number</b></label>
                     <br>
-                    <input type="text" name="regno" ng-model="regno" ng-pattern="reg" required placeholder="Enter your regno"><br>
+                    <input type="text" name="regno" ng-model="regno" ng-pattern=" /^[a-zA-Z0-9]{3,14}$/" required placeholder="Enter your regno"><br>
                     <span style="color:red" ng-show="myForm.regno.$dirty && myForm.regno.$invalid">
                     <span ng-show="myForm.regno.$error.required">Regno is required.</span>
                     <span ng-show="myForm.regno.$error.pattern">Invalid regno.</span>
@@ -137,10 +137,9 @@
         app.controller('validateCtrl', function($scope,$window) {
         $scope.reg = /^[0-9]{5}$/;
         $scope.pho = /^[0-9]{10}$/;
-        $scope.re = /^[a-zA-Z0-9]\w{3,14}$/;
+        $scope.re = /^[a-zA-Z0-9]{3,14}$/;
         $scope.compare = function (repass) {
-                  $scope.isconfirm = $scope.pass == repass ?
-                          true : false;
+                  $scope.isconfirm = $scope.pass == repass ?true : false;
               }
         $scope.reset = function() {
             $scope.user = "";
@@ -152,7 +151,12 @@
             }
             $scope.submit=function()
             {
-                $window.location.href="Create_Election/index.html"
+                if($scope.user==undefined||$scope.phone==undefined||$scope.pass==undefined||$scope.repass==undefined){
+                    alert("Fields are empty");
+                }
+                else{
+                    $window.location.href="Create_Election/index.html"
+                }
             }
             //$scope.reset();  
         });

@@ -13,57 +13,49 @@ body{
 }
 .navbar
 {
-    background-color: #333;
-    overflow:visible;
-    margin: 0;
-    
+  width:100%;
+  position:fixed;
+  top:0px;
+  display: flex;
+  height:12%;
+  background-color: #333;
+  overflow:visible;
+  text-align: center;
 }
-a:hover
+.navbar a:hover
 {
-    color:deeppink ;
+  color:deeppink ;
 }
 .navbar i:hover{
-    color:deeppink;
-  }
-
+  color:deeppink;
+}
 .navbar ul{
-    list-style: none;
-    padding: 20px 0px;
-    text-align: center;
-    margin: 0;
+  list-style: none;
+  padding-top:15px;
+  text-align: center;
 }
 
 .navbar li{
-    display:inline;
-    padding: 0 20px;
-    margin: 0;
+  margin-left: 95px;
+  text-align: center;
+  display:inline;
 }
 
 .navbar a{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0;
-    font-size: 20px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0;
+  font-size: 20px;
     
 }
-.navbar a{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0;
-    font-size: 20px;
-      
-  }
-  .navbar .material-icons,#rocket
-  {
-    width: 25px;
-    height: 25px;
-    margin-right: 2px; 
-    color: azure; 
-  }
-
-
+.navbar .material-icons,#rocket
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 2px; 
+  color: azure; 
+}
 .overview 
 {
     background-color: #0bacfa;;
@@ -71,7 +63,10 @@ a:hover
     padding: 5px 20px;
     margin-top: 0px;
     font-size: 20px;
-    margin: 0;
+    text-align: center;
+    width: 101%;
+    margin-left: 0px;
+    margin-top:72px;
     height: 20%;
 }
 
@@ -158,3 +153,6 @@ footer
 {
     color:rgba(19, 206, 112, 0.918);
 }
+body{
+    font-family: 'Quicksand', sans-serif;
+  }

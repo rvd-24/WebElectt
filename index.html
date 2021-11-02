@@ -5,6 +5,9 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Voting Login</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="index.css">
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
  <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script>
@@ -19,17 +22,15 @@
             <li><i class="material-icons">ballot</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddC/"> Ballot</a></li>
             <li><i class="material-icons">how_to_reg</i><a id="top" href="https://rvd-24.github.io/WebElectt/AddV/">Voters</a></li>
             <li><i class="material-icons">preview</i><a id="top" href="#">Preview</a></li>
-            <li><i class="material-icons">add</i><a id="top" href="#">Add-ons</a></li>
             <li><i class="fas fa-rocket" id="rocket"></i><a id="top" href="#">Launch</a></li>
         </ul>
   </div>
  <div class="row">
  <div class="column">
  <article>
-                <form method="POST" class="form" action="blank" align="left" ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+                <form method="POST" class="form" align="left" ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
                     <div class="container">
                         <h1>REGISTER HERE</h1>
-                        <hr>
                     </div>
 
                     <label for="First name"><b>First name</b></label> <br>
@@ -37,7 +38,7 @@
                     <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
                     <span ng-show="myForm.user.$error.required">First name is required.</span>
                     </span>
-                    <br>
+                    <br><br>
 
                     
                     <label for="last name"><b>Last name</b></label> 
@@ -46,7 +47,7 @@
                     <span style="color:red" ng-show="myForm.last.$dirty && myForm.last.$invalid">
                     <span ng-show="myForm.last.$error.required">Lastname is required.</span>
                     </span>
-                    <br>
+                    <br><br>
                     
                     <label for="email"><b>Email</b></label>
                     <br>
@@ -55,7 +56,7 @@
                     <span ng-show="myForm.email.$error.required">Email is required.</span>
                     <span ng-show="myForm.email.$error.email">Invalid email address.</span>
                     </span>
-                    <br>
+                    <br><br>
                     
                     <label for="regno"><b>Registration Number</b></label>
                     <br>
@@ -64,7 +65,7 @@
                     <span ng-show="myForm.regno.$error.required">Regno is required.</span>
                     <span ng-show="myForm.regno.$error.pattern">Invalid regno.</span>
                     </span>
-                    <br>
+                    <br><br>
 
                     <b>Phone Number</b>
                     <br>
@@ -73,7 +74,7 @@
                     <span ng-show="myForm.phone.$error.required">Phone no is required.</span>
                     <span ng-show="myForm.phone.$error.pattern">Invalid phone no.</span>
                     </span>
-                    <br>
+                    <br><br>
 
                     <b>Gender</b> 
                     <br>
@@ -90,7 +91,7 @@
                     <span ng-show="myForm.pass.$error.required">Password is required.</span>
                     <span ng-show="myForm.pass.$error.pattern">Not valid password.</span>
                     </span>
-                    <br>
+                    <br><br>
 
 
                     <b>Confirm password</b> 
@@ -103,14 +104,13 @@
                     </span>
                     </span>
                     
-                    
                     <div>
                     <input type="checkbox" name="checkbox" checked> I agree to the <a href="blank" target="new">Terms and Conditions</a> 
                     <br>
                     <br>
     
                     <button name="submit" class="sub" size="25" ng-disabled = "myForm.user.$dirty && myForm.user.$invalid || myForm.last.$dirty && myForm.last.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.regno.$dirty && myForm.regno.$invalid || myForm.phone.$dirty && myForm.phone.$invalid || myForm.pass.$dirty && myForm.pass.$invalid || myForm.repass.$dirty && myForm.repass.$invalid" ng-click="submit()">Submit</button>
-                    <button class="res" size="25"  ng-click="reset()">Reset</button>
+                    <button type="reset" class="res" size="25"  ng-click="reset()">Reset</button>
                     </div>
 
                     <br>
@@ -129,12 +129,12 @@
 
  <br>
 <footer align="center">
-            &copy; 2021 Student Voting Form. All Rights Reserved | Design By <span class="foot">Students</span> 
+            &copy; 2021 Student Voting Form. All Rights Reserved | Designed By <span class="foot">Students</span> 
         </footer>
   
  <script>
         var app = angular.module('myApp', []);
-        app.controller('validateCtrl', function($scope) {
+        app.controller('validateCtrl', function($scope,$window) {
         $scope.reg = /^[0-9]{5}$/;
         $scope.pho = /^[0-9]{10}$/;
         $scope.re = /^[a-zA-Z0-9]\w{3,14}$/;
@@ -149,6 +149,10 @@
             $scope.phone = "";
             $scope.pass = "";
             $scope.repass = "";
+            }
+            $scope.submit=function()
+            {
+                $window.location.href="Create_Election/index.html"
             }
             //$scope.reset();  
         });

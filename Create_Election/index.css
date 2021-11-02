@@ -61,7 +61,15 @@ input[type=text]
     border-radius:10px;
     margin:5em 0;
 }
-footer{
-    clear: both;
-    margin-bottom: 0px;
+footer
+{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top:30px;
+}
+.foot
+{
+    color:rgba(19, 206, 112, 0.918);
 }

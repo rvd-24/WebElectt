@@ -25,10 +25,17 @@
                             <label for="End Date">End Date</label><br>
                             <input type="datetime-local" id="edate" required><br></div>
                         <div> 
-                        <button type="submit" class="btn btn-success submit">Submit</button><br></div>
+                        <button type="submit" class="btn btn-success submit" onclick="redirect()">Submit</button><br></div>
                     </div></form>
         </div>
-        <button type="button" class="btn btn-warning" id="help">Help</button>
-        <footer align="center">&copy; 2021 Student Voting Form. All Rights Reserved | Design By Students</footer>
+        <button type="button" class="btn btn-warning" id="help">Help</button><br>
+        <footer align="center">
+            &copy; 2021 Student Voting Form. All Rights Reserved | Designed By <span class="foot">Students</span> 
+        </footer>
+        <script>
+            function redirect(){
+                window.location.href="https://rvd-24.github.io/WebElectt/Overview/"
+            }
+        </script>
     </body>
 </html>

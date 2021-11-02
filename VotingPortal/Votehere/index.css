@@ -55,51 +55,6 @@ body{
   margin-right: 2px; 
   color: azure; 
 }
-/*.nav_icons
-{
-    width: 25px;
-    height: 25px;
-    margin-right: 2px;   
-}
-.navbar a:hover
-{
-  color:deeppink ;
-}
-.navbar i:hover{
-  color:deeppink;
-}
-.navbar a{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0;
-    font-size: 20px; 
-}
-.navbar
-{
-    background-color: #333;
-    overflow:visible;
-    margin: 0;
-}
-.navbar ul{
-    list-style: none;
-    padding-top: 20px 0px;
-    text-align: center;
-    margin: 0;
-}
-.navbar li
-{
-    display:inline;
-    padding: 0 20px;
-    margin: 0;
-}
-.navbar .material-icons,#rocket
-{
-  width: 25px;
-  height: 25px;
-  margin-right: 2px; 
-  color: azure; 
-}*/
 .block1
 {
     float: left;
@@ -116,7 +71,9 @@ body{
 {
     clear: both;
 }
-
+p{
+  font-size: 18px;
+}
 .sub
 {
     color:whitesmoke;
@@ -190,3 +147,4 @@ footer
 {
     color:rgba(19, 206, 112, 0.918);
 }
+body{font-family: 'Quicksand', sans-serif;}

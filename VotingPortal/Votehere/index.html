@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9782be8717.js" crossorigin="anonymous"></script></head>
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+        function getdata(){
+            var cont=document.getElementById("one");
+            var req= new XMLHttpRequest();
+            req.open('GET','candidate.json')
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -46,7 +56,7 @@
     
                 <div class="block2">
                     <div class="b1"><img src="1.jpeg" width="25%" alt=""  class="img1"></div>
-                    <div class="b2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias at, debitis totam expedita non ut doloribus a tempore magni veritatis nihil illo dolores culpa fugiat laborum voluptatem nesciunt id quibusdam enim recusandae itaque ratione. Voluptate aliquid harum dolorum minus. Ad, laborum. Repudiandae necessitatibus nobis, itaque animi non repellat magni aperiam?</p></div>
+                    <div class="b2"><p id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias at, debitis totam expedita non ut doloribus a tempore magni veritatis nihil illo dolores culpa fugiat laborum voluptatem nesciunt id quibusdam enim recusandae itaque ratione. Voluptate aliquid harum dolorum minus. Ad, laborum. Repudiandae necessitatibus nobis, itaque animi non repellat magni aperiam?</p></div>
                     <div class="b3"><input type="submit" name="submit" class="sub" value="VOTE" size="25"></div>
                 </div>
                 <div class="clr"></div>

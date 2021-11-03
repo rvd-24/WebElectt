@@ -59,7 +59,7 @@
       <script>
         var app = angular.module('myApp', []);
         app.controller('validateCtrl', function($scope,$window) {
-        $scope.re = /^[a-zA-Z0-9]{3,14}$/;
+        $scope.re = /^[a-zA-Z0-9-!@#$%^&*()]{3,14}$/;
         $scope.redirect=function(){
             if($scope.user==undefined||$scope.email==undefined||$scope.pass==undefined)
             {
